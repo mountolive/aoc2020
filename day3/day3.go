@@ -8,11 +8,11 @@ import (
 
 const day3Problem = "./day3/day3_problem"
 
-type treeCounter struct {
+type TreeCounter struct {
 	treeLayout []string
 }
 
-func NewTreeCounter() (*treeCounter, error) {
+func NewTreeCounter() (*TreeCounter, error) {
 	f, err := os.Open(day3Problem)
 	if err != nil {
 		return nil, fmt.Errorf("Error opening the file: %w", err)
@@ -24,10 +24,10 @@ func NewTreeCounter() (*treeCounter, error) {
 	for scanner.Scan() {
 		lines = append(lines, scanner.Text())
 	}
-	return &treeCounter{lines}, nil
+	return &TreeCounter{lines}, nil
 }
 
-func (t *treeCounter) CountTrees(right, down int) int {
+func (t *TreeCounter) CountTrees(right, down int) int {
 	trees := 0
 	rightStep := right
 	rowLen := 0
@@ -50,7 +50,7 @@ func (t *treeCounter) CountTrees(right, down int) int {
 	return trees
 }
 
-func (t *treeCounter) MultiplyCount() int {
+func (t *TreeCounter) MultiplyCount() int {
 	rules := []struct{ right, down int }{
 		{1, 1},
 		{3, 1},
