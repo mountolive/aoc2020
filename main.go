@@ -7,6 +7,7 @@ import (
 	"github.com/mountolive/advent2020/day1"
 	"github.com/mountolive/advent2020/day2"
 	"github.com/mountolive/advent2020/day3"
+	"github.com/mountolive/advent2020/day4"
 )
 
 func main() {
@@ -23,4 +24,8 @@ func main() {
 	}
 	fmt.Println(treeCounter.CountTrees(3, 1))
 	fmt.Println(treeCounter.MultiplyCount())
+	fmt.Println("------------DAY 4-------------")
+	passportCounter, err := day4.NewPassportCounter()
+	fmt.Println(passportCounter.CountValidPassportsPart1())
+	fmt.Println(passportCounter.CountValidPassportsPart2())
 }
