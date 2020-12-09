@@ -8,6 +8,7 @@ import (
 	"github.com/mountolive/advent2020/day2"
 	"github.com/mountolive/advent2020/day3"
 	"github.com/mountolive/advent2020/day4"
+	"github.com/mountolive/advent2020/day5"
 )
 
 func main() {
@@ -28,4 +29,6 @@ func main() {
 	passportCounter, err := day4.NewPassportCounter()
 	fmt.Println(passportCounter.CountValidPassportsPart1())
 	fmt.Println(passportCounter.CountValidPassportsPart2())
+	fmt.Println("-----------DAY 5--------------")
+	fmt.Println(day5.FindHighestSeat())
 }
